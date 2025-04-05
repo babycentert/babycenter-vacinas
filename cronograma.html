@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+ <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Babycenter Vacinas</title>
@@ -23,34 +23,63 @@
           transform: translateY(0);
         }
       }
-      @media (max-width: 640px) {
-        table {
-          font-size: 0.9rem;
-        }
+      .chat-box {
+        background-color: #f1f1f1;
+        border-radius: 8px;
+        padding: 10px;
+        height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
       }
-      .faq-answer {
-        display: none;
+      .message {
+        background-color: #e0e0e0;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 5px;
       }
-      .faq-question.open + .faq-answer {
-        display: block;
+      .user {
+        font-weight: bold;
+      }
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+        font-size: 1rem;
+      }
+      button {
+        background-color: #6A2C97;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #5a1e80;
+      }
+      html {
+        scroll-behavior: smooth;
       }
     </style>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.faq-question').forEach(q => {
-          q.addEventListener('click', () => {
-            q.classList.toggle('open');
-            const answer = q.nextElementSibling;
-            if (answer.style.display === 'block') {
-              answer.style.display = 'none';
-            } else {
-              answer.style.display = 'block';
-            }
-          });
-        });
-      });
-    </script>
-  </head>
+  </head> 
+  <body class="bg-white text-gray-800">
+    <header class="bg-purple-600 text-white p-4 sticky top-0 z-50 shadow-md">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-2">
+        <h1 class="text-xl font-bold">Babycenter Vacinas</h1>
+        </div>
+        <nav class="space-x-4 text-sm">
+          <a href="index.html#sobre" class="hover:underline">Inicio</a>
+          <a href="vacinas.html" class="hover:underline">Vacinas</a>
+          <a href="pacotes.html" class="hover:underline">Pacotes</a>
+          <a href="cronograma.html" class="hover:underline">Cronograma de Vacinas</a>
+        </nav>
+      </div>
+    </header>
+
   <body class="bg-white text-gray-800">
     <!-- Topo com botões de navegação -->
     <div class="w-full flex justify-between items-center bg-white px-4 py-2 shadow-sm">
