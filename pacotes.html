@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pacote Bebês | Babycenter Vacinas</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Quicksand', sans-serif;
       background: #fff;
@@ -15,11 +18,11 @@
       line-height: 1.6;
     }
     header {
-      background: #FF4081; /* Rosa vibrante */
+      background: #7E57C2; /* Roxo */
       color: white;
       padding: 40px 20px;
       text-align: center;
-      border-bottom: 5px solid #FF80AB; /* Rosa mais claro */
+      border-bottom: 5px solid #B39DDB; /* Lilás claro */
     }
     header img.logo {
       width: 220px;
@@ -30,7 +33,7 @@
       color: #FFEB3B; /* Amarelo */
     }
     nav {
-      background: #FF80AB; /* Rosa claro */
+      background: #9575CD; /* Lilás médio */
       text-align: center;
       padding: 12px;
     }
@@ -42,7 +45,7 @@
       transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #81D4FA; /* Azul claro */
+      color: #FFEB3B; /* Amarelo */
     }
     section {
       padding: 40px 20px;
@@ -50,7 +53,7 @@
       margin: auto;
     }
     .card {
-      background: #F1F8E9; /* Amarelo muito claro */
+      background: #F3E5F5; /* Lilás bem claro */
       border-radius: 8px;
       padding: 20px;
       margin: 20px 0;
@@ -62,7 +65,7 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     }
     h2 {
-      color: #FF4081; /* Rosa vibrante */
+      color: #7E57C2; /* Roxo */
       margin-bottom: 20px;
     }
     .whatsapp-float {
@@ -91,10 +94,10 @@
       padding: 20px;
       text-align: center;
       font-size: 14px;
-      color: #FF4081; /* Rosa vibrante */
+      color: #7E57C2; /* Roxo */
     }
     footer a {
-      color: #FF4081;
+      color: #7E57C2;
       text-decoration: none;
     }
     footer a:hover {
@@ -104,10 +107,28 @@
       header h1 { font-size: 22px; }
       nav a { display: block; margin: 10px 0; }
     }
-    html {
-  scroll-behavior: smooth;
-}
 
+    /* Botão Voltar ao Topo */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #7E57C2;
+      color: white;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, background 0.3s ease;
+      z-index: 99;
+    }
+    #backToTopBtn:hover {
+      background-color: #9575CD;
+    }
   </style>
 </head>
 <body>
@@ -118,35 +139,36 @@
   </header>
 
   <nav>
+        
     <a href="index.html">Início</a>
     <a href="#pacotes">Pacotes</a>
     <a href="#contato">Contato</a>
   </nav>
 
   <section id="pacotes">
-    <h2>Pacotes Vacinais para Bebês</h2>
+    <h2>Pacotes Vacinais para Bebês de 2 a 9 meses</h2>
     <div class="card">
-      <h3>Pacote 2 meses</h3>
+      <h3>P2 meses</h3>
       <p>Vacinas incluídas: Hexavalente, Pneumo 15, Rotavírus e Meningo B</p>
     </div>
     <div class="card">
-      <h3>Pacote 3 meses</h3>
+      <h3>3 meses</h3>
       <p>Vacinas incluídas: Meningo B e Meningo ACWY</p>
     </div>
     <div class="card">
-      <h3>Pacote 4 meses</h3>
+      <h3>4 meses</h3>
       <p>Vacinas incluídas: Hexavalente, Pneumo 15, Rotavírus e Meningo B</p>
     </div>
     <div class="card">
-      <h3>Pacote 5 meses</h3>
+      <h3>5 meses</h3>
       <p>Vacinas incluídas: Meningo B e Meningo ACWY</p>
     </div>
     <div class="card">
-      <h3>Pacote 6 meses</h3>
+      <h3>6 meses</h3>
       <p>Vacinas incluídas: Hexavalente e Influenza (gripe)</p>
     </div>
     <div class="card">
-      <h3>Pacote 9 meses</h3>
+      <h3>9 meses</h3>
       <p>Vacinas incluídas: Febre amarela e Tríplice viral</p>
     </div>
   </section>
@@ -165,41 +187,36 @@
   <a class="whatsapp-float" href="https://wa.me/5512988652844" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
-</body>
 
   <!-- Botão Voltar ao Topo -->
-<button id="backToTopBtn" title="Voltar ao topo"
-  class="fixed bottom-5 right-5 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition-opacity opacity-0 pointer-events-none z-50">
-  ↑
-</button>
+  <button id="backToTopBtn" title="Voltar ao topo">↑</button>
 
-<script>
-  // Mostrar ou esconder o botão ao rolar
-  const backToTopBtn = document.getElementById("backToTopBtn");
+  <script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.remove("opacity-0", "pointer-events-none");
-    } else {
-      backToTopBtn.classList.add("opacity-0", "pointer-events-none");
-    }
-  });
-
-  // Scroll suave ao clicar no botão
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  // Scroll suave para links internos
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.opacity = "1";
+        backToTopBtn.style.pointerEvents = "auto";
+      } else {
+        backToTopBtn.style.opacity = "0";
+        backToTopBtn.style.pointerEvents = "none";
       }
     });
-  });
-</script>
 
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
