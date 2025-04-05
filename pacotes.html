@@ -6,47 +6,48 @@
   <title>Pacote Bebês | Babycenter Vacinas</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="estilos.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Quicksand', sans-serif;
-      background: #fff;
+      margin: 0;
+      background-color: #fff;
       color: #333;
-      line-height: 1.6;
     }
 
     header {
-      background: #7E57C2; /* Roxo */
+      background: linear-gradient(to right, #9575CD, #7E57C2);
       color: white;
-      padding: 40px 20px;
+      padding: 60px 20px 30px;
       text-align: center;
-      border-bottom: 5px solid #B39DDB; /* Lilás claro */
     }
 
-    header img.logo {
-      width: 220px;
-      height: auto;
-      margin-bottom: 10px;
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
     }
 
     header h1 span {
-      color: #FFEB3B; /* Amarelo */
+      color: #FFEB3B;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #F3E5F5;
     }
 
     nav {
-      background: #9575CD; /* Lilás médio */
+      background-color: #9575CD;
       text-align: center;
-      padding: 12px;
+      padding: 12px 0;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 12px;
       font-weight: 600;
-      transition: color 0.3s ease;
+      font-size: 0.95rem;
     }
 
     nav a:hover {
@@ -59,9 +60,16 @@
       margin: auto;
     }
 
+    h2 {
+      color: #7E57C2;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
     .card {
-      background: #F3E5F5; /* Lilás bem claro */
-      border-radius: 8px;
+      background: #F3E5F5;
+      border-radius: 12px;
       padding: 20px;
       margin: 20px 0;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -73,9 +81,21 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     }
 
-    h2 {
-      color: #7E57C2; /* Roxo */
-      margin-bottom: 20px;
+    .card h3 {
+      color: #7E57C2;
+      margin-bottom: 10px;
+    }
+
+    #contato p {
+      margin: 8px 0;
+    }
+
+    footer {
+      background-color: #FFEB3B;
+      text-align: center;
+      padding: 16px;
+      color: #7E57C2;
+      font-size: 0.85rem;
     }
 
     .whatsapp-float {
@@ -91,35 +111,12 @@
       font-size: 30px;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
       z-index: 100;
-      transition: transform 0.3s ease;
     }
 
     .whatsapp-float i {
       margin-top: 15px;
     }
 
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-
-    footer {
-      background: #FFEB3B; /* Amarelo */
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #7E57C2;
-    }
-
-    footer a {
-      color: #7E57C2;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Botão Voltar ao Topo */
     #backToTopBtn {
       position: fixed;
       bottom: 20px;
@@ -143,28 +140,28 @@
     }
 
     @media (max-width: 600px) {
-      header h1 { font-size: 22px; }
-      nav a { display: block; margin: 10px 0; }
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://raw.githubusercontent.com/babycentert/babycenter-vacinas/main/logo-babycenter.png.png" alt="Logo Babycenter Vacinas" class="logo">
     <h1>Babycenter <span>Vacinas</span></h1>
     <p>Pacotes vacinais para bebês de 2 a 9 meses 💜</p>
   </header>
 
-        <nav class="space-x-4 text-sm">
-          <a href="index.html" class="hover:underline">Sobre</a>
-          <a href="index.html" class="hover:underline">Serviços</a>
-          <a href="vacinas.html" class="hover:underline">Vacinas</a>
-          <a href="pacotes.html" class="hover:underline">Pacotes</a>
-          <a href="cronograma.html" class="hover:underline">Cronograma de Vacinas</a>
-          <a href="index.html" class="hover:underline">Dúvidas</a>
-          <a href="index.html" class="hover:underline">Contato</a>
-        </nav>
-
+  <nav>
+    <a href="index.html">Sobre</a>
+    <a href="index.html#servicos">Serviços</a>
+    <a href="vacinas.html">Vacinas</a>
+    <a href="pacotes.html">Pacotes</a>
+    <a href="cronograma.html">Cronograma</a>
+    <a href="index.html#duvidas">Dúvidas</a>
+    <a href="index.html#contato">Contato</a>
+  </nav>
 
   <section id="pacotes">
     <h2>Pacotes Vacinais para Bebês</h2>
@@ -224,17 +221,6 @@
 
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    // Scroll suave para âncoras
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-      });
     });
   </script>
 </body>
