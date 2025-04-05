@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Babycenter Vacinas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Quicksand', sans-serif;
+        scroll-behavior: smooth;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s ease-out forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .chat-box {
+        background-color: #f1f1f1;
+        border-radius: 8px;
+        padding: 10px;
+        height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+      }
+      .message {
+        background-color: #e0e0e0;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+      .user {
+        font-weight: bold;
+      }
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+        font-size: 1rem;
+      }
+      button {
+        background-color: #6A2C97;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #5a1e80;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .highlight {
+        background-color: #e9d5ff;
+        font-weight: bold;
+      }
+      @media (max-width: 640px) {
+        table {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Botão de acesso ao cronograma -->
+    <div class="w-full bg-purple-100 py-4 px-4 text-center">
+      <a href="#cronograma" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-full shadow hover:bg-purple-700 transition">Ver Cronograma de Vacinas</a>
+    </div>
+
+    <!-- Imagem destaque da página inicial -->
+    <section class="w-full max-w-6xl mx-auto px-4 py-8 fade-in">
+      <img src="smiley-woman-showing-sticker-arm-after-getting-vaccine.jpg" alt="Mulher sorridente após vacinação" class="w-full h-auto rounded-2xl shadow-md" />
+    </section>
+
+    <!-- Seção de cronograma de vacinas para bebês -->
+    <section id="cronograma" class="bg-yellow-50 py-12 px-4 fade-in">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold text-purple-700 mb-6 text-center">Cronograma de Vacinas para Bebês</h2>
+        <div class="overflow-x-auto mb-6">
+          <table class="min-w-full bg-white rounded shadow-md">
+            <thead class="bg-purple-200">
+              <tr>
+                <th class="text-left px-4 py-2">Idade</th>
+                <th class="text-left px-4 py-2">Vacinas Recomendadas</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr class="border-t">
+                <td class="px-4 py-2">Ao nascer</td>
+                <td class="px-4 py-2">BCG, Hepatite B</td>
+              </tr>
+              <tr class="border-t highlight">
+                <td class="px-4 py-2">2 meses</td>
+                <td class="px-4 py-2">Pentavalente, VIP, Rotavírus, Pneumocócica 10</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-2">3 meses</td>
+                <td class="px-4 py-2">Meningocócica C</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-2">4 meses</td>
+                <td class="px-4 py-2">Pentavalente, VIP, Rotavírus, Pneumocócica 10</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-2">5 meses</td>
+                <td class="px-4 py-2">Meningocócica C (2ª dose)</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-2">6 meses</td>
+                <td class="px-4 py-2">Pentavalente, VIP, Influenza</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-2">9 meses</td>
+                <td class="px-4 py-2">Febre Amarela</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-2">12 meses</td>
+                <td class="px-4 py-2">Tríplice Viral, Pneumocócica 10 (reforço), Meningocócica C (reforço)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="text-center">
+          <a href="#contato" class="inline-block bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700 transition">Fale com a gente</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Perguntas Frequentes -->
+    <section class="bg-purple-50 py-12 px-4 fade-in">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-purple-700 mb-6 text-center">Perguntas Frequentes</h2>
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="border border-purple-200 rounded-lg overflow-hidden">
+            <button class="w-full text-left px-4 py-3 bg-white font-semibold text-purple-800 focus:outline-none toggle-faq">
+              Quais vacinas são obrigatórias no primeiro ano?
+            </button>
+            <div class="px-4 py-3 bg-purple-100 text-purple-900 hidden">
+              As vacinas obrigatórias incluem BCG, Hepatite B, Pentavalente, VIP, Rotavírus, Pneumocócica, Meningocócica C, Tríplice Viral e Febre Amarela.
+            </div>
+          </div>
+          <!-- FAQ Item 2 -->
+          <div class="border border-purple-200 rounded-lg overflow-hidden">
+            <button class="w-full text-left px-4 py-3 bg-white font-semibold text-purple-800 focus:outline-none toggle-faq">
+              Meu bebê pode tomar mais de uma vacina no mesmo dia?
+            </button>
+            <div class="px-4 py-3 bg-purple-100 text-purple-900 hidden">
+              Sim! Algumas vacinas são combinadas na mesma aplicação e outras podem ser administradas no mesmo dia, em locais diferentes do corpo.
+            </div>
+          </div>
+          <!-- FAQ Item 3 -->
+          <div class="border border-purple-200 rounded-lg overflow-hidden">
+            <button class="w-full text-left px-4 py-3 bg-white font-semibold text-purple-800 focus:outline-none toggle-faq">
+              O que fazer se meu bebê tiver reação à vacina?
+            </button>
+            <div class="px-4 py-3 bg-purple-100 text-purple-900 hidden">
+              Reações leves como febre ou inchaço são comuns. Em caso de reações mais intensas, entre em contato com o pediatra ou com a Babycenter Vacinas imediatamente.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll('.toggle-faq').forEach(button => {
+        button.addEventListener('click', () => {
+          const answer = button.nextElementSibling;
+          answer.classList.toggle('hidden');
+        });
+      });
+    </script>
+  </body>
+</html>
