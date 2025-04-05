@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+ <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vacinas | Babycenter Vacinas</title>
+    <title>Babycenter Vacinas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
     <style>
       body {
-        font-family: 'Nunito', sans-serif;
+        font-family: 'Quicksand', sans-serif;
+        scroll-behavior: smooth;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s ease-out forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .chat-box {
+        background-color: #f1f1f1;
+        border-radius: 8px;
+        padding: 10px;
+        height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+      }
+      .message {
+        background-color: #e0e0e0;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+      .user {
+        font-weight: bold;
+      }
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+        font-size: 1rem;
+      }
+      button {
+        background-color: #6A2C97;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #5a1e80;
+      }
+      html {
+        scroll-behavior: smooth;
       }
     </style>
-  </head>
+  </head> 
   <body class="bg-white text-gray-800">
-    <header class="bg-purple-600 text-white p-3">
+    <header class="bg-purple-600 text-white p-4 sticky top-0 z-50 shadow-md">
       <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-2">
         <h1 class="text-xl font-bold">Babycenter Vacinas</h1>
-        <nav>
-    <a href="index.html">Inicio</a>
-    <a href="vacinas.html">Vacinas</a>
-    <a href="pacotes.html">Pacotes</a>
-    <a href="cronograma.html">Cronograma</a>
-  </nav>
+        </div>
+        <nav class="space-x-4 text-sm">
+          <a href="#sobre" class="hover:underline">Sobre</a>
+          <a href="#servicos" class="hover:underline">Serviços</a>
+          <a href="vacinas.html" class="hover:underline">Vacinas</a>
+          <a href="pacotes.html" class="hover:underline">Pacotes</a>
+          <a href="cronograma.html" class="hover:underline">Cronograma de Vacinas</a>
+          <a href="#duvidas" class="hover:underline">Dúvidas</a>
+          <a href="#contato" class="hover:underline">Contato</a>
+        </nav>
       </div>
     </header>
 
