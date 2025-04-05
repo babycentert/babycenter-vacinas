@@ -139,37 +139,47 @@
       </div>
     </section>
 
-   <section id="duvidas" class="py-12 px-4 bg-purple-100 fade-in">
+<section id="duvidas" class="py-12 px-4 bg-purple-100 fade-in">
   <div class="max-w-4xl mx-auto">
     <h2 class="text-xl font-bold text-purple-700 mb-4">Dúvidas Frequentes</h2>
     <div class="space-y-4">
       <div>
         <h3 class="faq-question cursor-pointer font-semibold text-purple-800">É seguro vacinar em casa?</h3>
-        <p class="faq-answer text-gray-700">Sim! Nossos profissionais seguem todos os protocolos de segurança e conservação.</p>
+        <p class="faq-answer text-gray-700 hidden">Sim! Nossos profissionais seguem todos os protocolos de segurança e conservação.</p>
       </div>
       <div>
         <h3 class="faq-question cursor-pointer font-semibold text-purple-800">Como sei quais vacinas meu filho precisa?</h3>
-        <p class="faq-answer text-gray-700">Nós avaliamos a caderneta de vacinação e indicamos o melhor plano conforme a idade.</p>
+        <p class="faq-answer text-gray-700 hidden">Nós avaliamos a caderneta de vacinação e indicamos o melhor plano conforme a idade.</p>
       </div>
       <div>
         <h3 class="faq-question cursor-pointer font-semibold text-purple-800">Vocês atendem gestantes?</h3>
-        <p class="faq-answer text-gray-700">Sim! Aplicamos DTPa para proteger mãe e bebê contra coqueluche e outras doenças.</p>
+        <p class="faq-answer text-gray-700 hidden">Sim! Aplicamos DTPa para proteger mãe e bebê contra coqueluche e outras doenças.</p>
       </div>
       <div>
         <h3 class="faq-question cursor-pointer font-semibold text-purple-800">Vocês têm cronograma de vacinação?</h3>
-        <p class="faq-answer text-gray-700">Sim! Nosso cronograma atualizado orienta as idades e intervalos ideais para cada vacina infantil.</p>
+        <p class="faq-answer text-gray-700 hidden">Sim! Nosso cronograma atualizado orienta as idades e intervalos ideais para cada vacina infantil.</p>
       </div>
       <div>
         <h3 class="faq-question cursor-pointer font-semibold text-purple-800">Posso tirar dúvidas sobre as vacinas pelo WhatsApp?</h3>
-        <p class="faq-answer text-gray-700">Sim, temos atendimento rápido e humanizado para orientar e esclarecer tudo.</p>
+        <p class="faq-answer text-gray-700 hidden">Sim, temos atendimento rápido e humanizado para orientar e esclarecer tudo.</p>
       </div>
       <div>
         <h3 class="faq-question cursor-pointer font-semibold text-purple-800">Quais vacinas estão disponíveis?</h3>
-        <p class="faq-answer text-gray-700">Oferecemos vacinas comuns e especiais, como Herpes Zoster, HPV, bronquiolite e muito mais. <a href="vacinas.html" class="text-purple-600 underline">Saiba mais.</a></p>
+        <p class="faq-answer text-gray-700 hidden">Oferecemos vacinas comuns e especiais, como Herpes Zoster, HPV, bronquiolite e muito mais. <a href="vacinas.html" class="text-purple-600 underline">Saiba mais.</a></p>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach((question) => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      answer.classList.toggle('hidden');
+    });
+  });
+</script>
+
 
     <section id="comentarios" class="bg-gray-50 py-12 px-4 fade-in">
       <div class="max-w-6xl mx-auto">
