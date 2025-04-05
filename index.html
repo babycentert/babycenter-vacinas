@@ -1,130 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Babycenter Vacinas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background: #fff;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #9b59b6;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header img.logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-    header h1 span {
-      color: #f1c40f;
-    }
-    nav {
-      background: #f1c40f;
-      text-align: center;
-      padding: 10px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-    }
-    section {
-      padding: 30px;
-      max-width: 960px;
-      margin: auto;
-    }
-    .services, .contact {
-      background: #f9f9f9;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 8px;
-    }
-    .cta {
-      text-align: center;
-      margin: 40px 0;
-    }
-    .cta a {
-      background: #9b59b6;
-      color: white;
-      padding: 15px 25px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-    }
-    footer {
-      background: #eee;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-    img.hero {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="Logo Babycenter Vacinas" class="logo">
-    <h1>Babycenter <span>Vacinas</span></h1>
-    <p>Cuidado, carinho e proteção para todas as idades 💜</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Babycenter Vacinas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Nunito', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="bg-purple-600 text-white shadow-md">
+      <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+        <div class="flex items-center gap-2">
+          <img src="logo.png" alt="Logo Babycenter" class="h-10" />
+          <h1 class="text-xl font-bold">Babycenter Vacinas</h1>
+        </div>
+        <nav class="hidden md:flex gap-6 text-sm">
+          <a href="#sobre" class="hover:underline">Sobre</a>
+          <a href="#servicos" class="hover:underline">Serviços</a>
+          <a href="#contato" class="hover:underline">Contato</a>
+        </nav>
+      </div>
+    </header>
 
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
-  </nav>
+    <!-- Hero -->
+    <section class="bg-yellow-100 py-16 px-4 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-purple-700">
+          Proteção com carinho desde os primeiros meses
+        </h2>
+        <p class="text-lg mb-6">
+          Vacinas, medicamentos com prescrição e pacotes especiais para bebês.
+        </p>
+        <a
+          href="https://wa.me/5512988652844"
+          class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-2xl shadow-md transition"
+        >
+          Agende pelo WhatsApp
+        </a>
+      </div>
+    </section>
 
-  <section>
-    <img src="https://images.unsplash.com/photo-1615650091528-0f28e6f59f3c" alt="Vacinação infantil" class="hero">
-  </section>
+    <!-- Sobre -->
+    <section id="sobre" class="py-16 px-4 bg-white">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-purple-700 mb-4">Sobre nós</h3>
+          <p class="text-lg leading-relaxed">
+            Na Babycenter Vacinas, cuidamos da saúde da sua família com amor,
+            responsabilidade e segurança. Oferecemos atendimento especializado
+            para todas as idades, com foco em bebês de 2 a 9 meses. Contamos com
+            uma equipe qualificada, vacinas atualizadas e possibilidade de
+            atendimento domiciliar.
+          </p>
+        </div>
+        <img
+          src="bebes-vacina.jpg"
+          alt="Bebês sendo vacinados"
+          class="rounded-2xl shadow-md"
+        />
+      </div>
+    </section>
 
-  <section id="sobre">
-    <h2>Sobre a Babycenter Vacinas</h2>
-    <p>Fundada em 26/08/2014 por Taiani, enfermeira formada em 2006 pela UNIP de Ribeirão Preto, com vasta experiência em maternidade, UTI neonatal e infantil. A Babycenter nasceu com o propósito de oferecer proteção e cuidado através da imunização. O primeiro paciente, um bebê oriental chamado Guilherme, deu início a essa jornada de amor e prevenção.</p>
-    <p>Participante ativa de eventos como a Jornada SBIm e palestrante em cursos para gestantes, Taiani busca oferecer um serviço confiável e humanizado para todas as idades.</p>
-  </section>
+    <!-- Serviços -->
+    <section id="servicos" class="py-16 px-4 bg-yellow-50">
+      <div class="max-w-5xl mx-auto text-center">
+        <h3 class="text-2xl font-bold text-purple-700 mb-8">Nossos serviços</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl shadow-md p-6 text-left">
+            <h4 class="text-xl font-semibold mb-2">Pacotes para bebês</h4>
+            <p>Vacinação completa dos 2 aos 9 meses com segurança e carinho.</p>
+          </div>
+          <div class="bg-white rounded-2xl shadow-md p-6 text-left">
+            <h4 class="text-xl font-semibold mb-2">Vacinas especiais</h4>
+            <p>
+              Herpes Zoster, HPV, Abrysvvo, Beyfortus, bronquiolite e muito
+              mais.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl shadow-md p-6 text-left">
+            <h4 class="text-xl font-semibold mb-2">Atendimento domiciliar</h4>
+            <p>Vacinação com conforto e praticidade na sua casa.</p>
+          </div>
+          <div class="bg-white rounded-2xl shadow-md p-6 text-left">
+            <h4 class="text-xl font-semibold mb-2">Aplicação de medicamentos</h4>
+            <p>
+              Administração segura de medicamentos com prescrição médica.
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl shadow-md p-6 text-left">
+            <h4 class="text-xl font-semibold mb-2">Cobertura ampla</h4>
+            <p>Atendimento para todas as idades, com equipe especializada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="servicos" class="services">
-    <h2>Serviços oferecidos</h2>
-    <ul>
-      <li>✅ Aplicação de medicamentos com prescrição médica</li>
-      <li>✅ Vacinas para todas as idades</li>
-      <li>✅ Atendimento domiciliar</li>
-      <li>✅ Pacotes vacinais para bebês de 2 a 9 meses</li>
-      <li>✅ Vacinas: Herpes Zoster, HPV, Abrysvvo, Beyfortus, bronquiolite</li>
-    </ul>
-  </section>
+    <!-- Contato -->
+    <section id="contato" class="py-16 px-4 bg-white">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-2xl font-bold text-purple-700 mb-6">Fale com a gente</h3>
+        <p class="mb-2">
+          <strong>Endereço:</strong> Rua Major Francisco de Paula Elias, 464,
+          Vila Adyana – São José dos Campos
+        </p>
+        <p class="mb-2">
+          <strong>Telefone:</strong>
+          <a href="tel:+5512988652844" class="text-purple-600"
+            >(12) 98865-2844</a
+          >
+        </p>
+        <p class="mb-4">
+          <strong>WhatsApp:</strong>
+          <a
+            href="https://wa.me/5512988652844"
+            class="text-purple-600 underline"
+            >Clique para conversar</a
+          >
+        </p>
+      </div>
+    </section>
 
-  <section class="cta">
-    <h2>Agende sua visita agora!</h2>
-    <p>Fale diretamente conosco pelo WhatsApp e tire suas dúvidas.</p>
-    <a href="https://wa.me/5512988652844" target="_blank">💬 Agendar pelo WhatsApp</a>
-  </section>
-
-  <section id="contato" class="contact">
-    <h2>Contato</h2>
-    <p><strong>Telefone:</strong> (12) 98865-2844</p>
-    <p><strong>Endereço:</strong> Rua Major Francisco de Paula Elias, 464 - Vila Adyana, São José dos Campos/SP (próximo ao Parque Santos Dumont)</p>
-    <p><strong>E-mail:</strong> contato@babycentervacinas.com.br (exemplo)</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Babycenter Vacinas. Todos os direitos reservados.</p>
-  </footer>
-</body>
+    <!-- Footer -->
+    <footer class="bg-purple-600 text-white text-center py-4">
+      <p>&copy; 2025 Babycenter Vacinas. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>
