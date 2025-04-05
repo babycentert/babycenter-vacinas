@@ -1,163 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pacote Bebês | Babycenter Vacinas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="estilos.css">
-  <style>
-    body {
-      font-family: 'Quicksand', sans-serif;
-      margin: 0;
-      background-color: #fff;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(to right, #9575CD, #7E57C2);
-      color: white;
-      padding: 20px;
-      text-align: left;
-    }
-
-    header h1 {
-      font-size: 1.8rem;
-      margin: 0;
-      margin-bottom: 6px;
-    }
-
-    header h1 span {
-      color: #FFEB3B;
-    }
-
-    header p {
-      font-size: 0.95rem;
-      margin: 0;
-      color: #F3E5F5;
-    }
-
-    nav {
-      background-color: #9575CD;
-      text-align: center;
-      padding: 12px 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    nav a:hover {
-      color: #FFEB3B;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 960px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #7E57C2;
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    .card {
-      background: #F3E5F5;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 20px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    }
-
-    .card h3 {
-      color: #7E57C2;
-      margin-bottom: 10px;
-    }
-
-    #contato p {
-      margin: 8px 0;
-    }
-
-    footer {
-      background-color: #FFEB3B;
-      text-align: center;
-      padding: 16px;
-      color: #7E57C2;
-      font-size: 0.85rem;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      z-index: 100;
-    }
-
-    .whatsapp-float i {
-      margin-top: 15px;
-    }
-
-    #backToTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 90px;
-      background: #7E57C2;
-      color: white;
-      border: none;
-      padding: 15px;
-      font-size: 20px;
-      border-radius: 50%;
-      cursor: pointer;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      z-index: 100;
-    }
-
-    #backToTopBtn.show {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 8px 0;
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Babycenter Vacinas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Quicksand', sans-serif;
+        scroll-behavior: smooth;
       }
-
-      header {
-        text-align: center;
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s ease-out forwards;
       }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Babycenter <span>Vacinas</span></h1>
-    <p>Pacotes vacinais para bebês de 2 a 9 meses 💜</p>
-  </header>
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .chat-box {
+        background-color: #f1f1f1;
+        border-radius: 8px;
+        padding: 10px;
+        height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+      }
+      .message {
+        background-color: #e0e0e0;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+      .user {
+        font-weight: bold;
+      }
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+        font-size: 1rem;
+      }
+      button {
+        background-color: #6A2C97;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #5a1e80;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head> 
+  <body class="bg-white text-gray-800">
+    <header class="bg-purple-600 text-white p-4 sticky top-0 z-50 shadow-md">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-2">
+        <h1 class="text-xl font-bold">Babycenter Vacinas</h1>
+        </div>
+        <nav class="space-x-4 text-sm">
+          <a href="index.html#sobre" class="hover:underline">Inicio</a>
+          <a href="vacinas.html" class="hover:underline">Vacinas</a>
+          <a href="pacotes.html" class="hover:underline">Pacotes</a>
+          <a href="cronograma.html" class="hover:underline">Cronograma de Vacinas</a>
+        </nav>
+      </div>
+    </header>
 
   <nav>
     <a href="index.html">Inicio</a>
