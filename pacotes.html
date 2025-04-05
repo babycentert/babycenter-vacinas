@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pacote Bebês | Babycenter Vacinas</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Quicksand', sans-serif;
       background: #fff;
@@ -18,7 +16,7 @@
       line-height: 1.6;
     }
     header {
-      background: #7E57C2; /* Roxo */
+      background: #7E57C2; /* Roxo médio */
       color: white;
       padding: 40px 20px;
       text-align: center;
@@ -27,13 +25,13 @@
     header img.logo {
       width: 220px;
       height: auto;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
     header h1 span {
-      color: #FFEB3B; /* Amarelo */
+      color: #FFF176; /* Amarelo suave */
     }
     nav {
-      background: #9575CD; /* Lilás médio */
+      background: #9575CD; /* Roxo/lilás intermediário */
       text-align: center;
       padding: 12px;
     }
@@ -45,7 +43,7 @@
       transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #FFEB3B; /* Amarelo */
+      color: #FFF176; /* Amarelo suave */
     }
     section {
       padding: 40px 20px;
@@ -65,7 +63,7 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     }
     h2 {
-      color: #7E57C2; /* Roxo */
+      color: #7E57C2;
       margin-bottom: 20px;
     }
     .whatsapp-float {
@@ -89,12 +87,29 @@
     .whatsapp-float:hover {
       transform: scale(1.1);
     }
+    #backToTopBtn {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background-color: #7E57C2;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 99;
+    }
     footer {
-      background: #FFEB3B; /* Amarelo */
+      background: #FFF176; /* Amarelo suave */
       padding: 20px;
       text-align: center;
       font-size: 14px;
-      color: #7E57C2; /* Roxo */
+      color: #7E57C2;
     }
     footer a {
       color: #7E57C2;
@@ -107,68 +122,45 @@
       header h1 { font-size: 22px; }
       nav a { display: block; margin: 10px 0; }
     }
-
-    /* Botão Voltar ao Topo */
-    #backToTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #7E57C2;
-      color: white;
-      padding: 12px 16px;
-      border: none;
-      border-radius: 50%;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease, background 0.3s ease;
-      z-index: 99;
-    }
-    #backToTopBtn:hover {
-      background-color: #9575CD;
-    }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://cdn.jsdelivr.net/gh/babycentert/babycentert.github.io/assets/logo-babycenter-nova.png" alt="Logo Babycenter Vacinas" class="logo">
+    <img src="/mnt/data/A_2D_digital_graphic_design_features_the_logo_and_.png" alt="Logo Babycenter Vacinas" class="logo">
     <h1>Babycenter <span>Vacinas</span></h1>
     <p>Pacotes vacinais para bebês de 2 a 9 meses 💜</p>
   </header>
 
   <nav>
-        
     <a href="index.html">Início</a>
     <a href="#pacotes">Pacotes</a>
     <a href="#contato">Contato</a>
   </nav>
 
   <section id="pacotes">
-    <h2>Pacotes Vacinais para Bebês de 2 a 9 meses</h2>
+    <h2>Pacotes Vacinais para Bebês</h2>
     <div class="card">
-      <h3>P2 meses</h3>
+      <h3>Pacote 2 meses</h3>
       <p>Vacinas incluídas: Hexavalente, Pneumo 15, Rotavírus e Meningo B</p>
     </div>
     <div class="card">
-      <h3>3 meses</h3>
+      <h3>Pacote 3 meses</h3>
       <p>Vacinas incluídas: Meningo B e Meningo ACWY</p>
     </div>
     <div class="card">
-      <h3>4 meses</h3>
+      <h3>Pacote 4 meses</h3>
       <p>Vacinas incluídas: Hexavalente, Pneumo 15, Rotavírus e Meningo B</p>
     </div>
     <div class="card">
-      <h3>5 meses</h3>
+      <h3>Pacote 5 meses</h3>
       <p>Vacinas incluídas: Meningo B e Meningo ACWY</p>
     </div>
     <div class="card">
-      <h3>6 meses</h3>
+      <h3>Pacote 6 meses</h3>
       <p>Vacinas incluídas: Hexavalente e Influenza (gripe)</p>
     </div>
     <div class="card">
-      <h3>9 meses</h3>
+      <h3>Pacote 9 meses</h3>
       <p>Vacinas incluídas: Febre amarela e Tríplice viral</p>
     </div>
   </section>
@@ -188,12 +180,10 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Botão Voltar ao Topo -->
-  <button id="backToTopBtn" title="Voltar ao topo">↑</button>
+  <button id="backToTopBtn" title="Voltar ao topo">&#8679;</button>
 
   <script>
     const backToTopBtn = document.getElementById("backToTopBtn");
-
     window.addEventListener("scroll", () => {
       if (window.scrollY > 300) {
         backToTopBtn.style.opacity = "1";
@@ -203,11 +193,9 @@
         backToTopBtn.style.pointerEvents = "none";
       }
     });
-
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
