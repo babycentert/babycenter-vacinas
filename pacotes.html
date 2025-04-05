@@ -81,122 +81,202 @@
     </header>
 
     
-    <!-- CDN do Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Quicksand -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
-    <!-- FontAwesome para ícones -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-    <style>
-      body {
-        font-family: 'Quicksand', sans-serif;
-        scroll-behavior: smooth;
-      }
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 1s ease-out forwards;
-      }
-      @keyframes fadeIn {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      /* Estilo da tabela */
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-      }
-      table, th, td {
-        border: 1px solid #ddd;
-      }
-      th, td {
-        padding: 10px;
-        text-align: center;
-      }
-      th {
-        background-color: #6A2C97;
-        color: white;
-      }
-      td {
-        background-color: #f9f9f9;
-      }
-      .dolorosa {
-        color: red;
-        font-weight: bold;
-      }
-      button {
-        background-color: #6A2C97;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-      button:hover {
-        background-color: #5a1e80;
-      }
-      #backToTopBtn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #6A2C97;
-        color: white;
-        padding: 10px;
-        border-radius: 50%;
-        display: none;
-        cursor: pointer;
-      }
-      #backToTopBtn.show {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <section id="pacotes">
-      <h2 class="text-center text-2xl font-bold mb-4">Pacotes Vacinais para Bebês</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Pacote</th>
-            <th>Vacinas Incluídas</th>
-            </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2 meses</td>
-            <td>Hexavalente, Pneumo 15, Rotavírus e Meningo B</td>
-                   </tr>
-          <tr>
-            <td>3 meses</td>
-            <td>Meningo B e Meningo ACWY</td>
-          </tr>
-          <tr>
-            <td>4 meses</td>
-            <td>Hexavalente, Pneumo 15, Rotavírus e Meningo B</td>
-                   </tr>
-          <tr>
-            <td>5 meses</td>
-            <td>Meningo B e Meningo ACWY</td>
-          </tr>
-          <tr>
-            <td>6 meses</td>
-            <td>Hexavalente e Influenza (gripe)</td>
-          </tr>
-          <tr>
-            <td>9 meses</td>
-            <td>Febre amarela e Tríplice viral</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+   <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacote de Vacinas - 2 a 9 Meses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin-top: 30px;
+    }
+
+    .vacinas-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .vacinas-table thead {
+      background-color: #8a4af3; /* Roxo */
+      color: white;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .vacinas-table th, .vacinas-table td {
+      padding: 12px 15px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .vacinas-table tbody tr:nth-child(odd) {
+      background-color: #f0e0f6; /* Lilás */
+    }
+
+    .vacinas-table tbody tr:nth-child(even) {
+      background-color: #ffffff; /* Branco */
+    }
+
+    .vacinas-table tbody tr:hover {
+      background-color: #f3d8ff; /* Efeito de hover */
+    }
+
+    .status {
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .status-pendente {
+      background-color: #ffb84d; /* Amarelo */
+      color: white;
+    }
+
+    .status-concluida {
+      background-color: #4caf50; /* Verde */
+      color: white;
+    }
+
+    .info-tooltip {
+      position: absolute;
+      background-color: #f3d8ff;
+      padding: 10px;
+      border-radius: 8px;
+      display: none;
+      max-width: 300px;
+      font-size: 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    td:hover .info-tooltip {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 style="text-align: center; color: #8a4af3;">Pacote de Vacinas - 2 a 9 Meses</h1>
+    <table class="vacinas-table">
+      <thead>
+        <tr>
+          <th>Idade</th>
+          <th>Vacina</th>
+          <th>Importância</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2 Meses</td>
+          <td>Hexavalente, Pneumo 15, Rotavírus e Meningo B</td>
+          <td>
+            <div>
+              Protege contra doenças como difteria, tétano, coqueluche, hepatite B, poliomielite, pneumonia, meningite e diarreia grave.
+              <div class="info-tooltip">
+                <strong>Hexavalente:</strong> Protege contra 6 doenças graves. <br>
+                <strong>Pneumo 15:</strong> Previne infecções causadas pela bactéria pneumococo.<br>
+                <strong>Rotavírus:</strong> Previne a diarreia grave causada pelo rotavírus.<br>
+                <strong>Meningo B:</strong> Previne meningite causada pela bactéria meningococo B.
+              </div>
+            </div>
+          </td>
+          <td><span class="status status-pendente">Agendar</span></td>
+        </tr>
+        <tr>
+          <td>3 Meses</td>
+          <td>Meningo B e Meningo ACWY</td>
+          <td>
+            <div>
+              Protege contra meningite grave causada por diferentes tipos de meningococo.
+              <div class="info-tooltip">
+                <strong>Meningo B:</strong> Previne a meningite causada pelo meningococo B. <br>
+                <strong>Meningo ACWY:</strong> Protege contra os tipos A, C, W e Y do meningococo.
+              </div>
+            </div>
+          </td>
+          <td><span class="status status-pendente">Agendar</span></td>
+        </tr>
+        <tr>
+          <td>4 Meses</td>
+          <td>Hexavalente, Pneumo 15, Rotavírus e Meningo B</td>
+          <td>
+            <div>
+              Mantém a proteção contra várias doenças graves.
+              <div class="info-tooltip">
+                <strong>Hexavalente:</strong> Continuação da proteção das 2 meses. <br>
+                <strong>Pneumo 15:</strong> Reforça a proteção contra pneumococo.<br>
+                <strong>Rotavírus:</strong> Reforça a proteção contra a diarreia.<br>
+                <strong>Meningo B:</strong> Continuação da proteção contra meningite.
+              </div>
+            </div>
+          </td>
+          <td><span class="status status-pendente">Agendar</span></td>
+        </tr>
+        <tr>
+          <td>5 Meses</td>
+          <td>Meningo B e Meningo ACWY</td>
+          <td>
+            <div>
+              Refina a imunização contra meningites graves.
+              <div class="info-tooltip">
+                <strong>Meningo B:</strong> Reforça a proteção contra meningite B. <br>
+                <strong>Meningo ACWY:</strong> Aumenta a defesa contra meningite dos tipos A, C, W e Y.
+              </div>
+            </div>
+          </td>
+          <td><span class="status status-pendente">Agendar</span></td>
+        </tr>
+        <tr>
+          <td>6 Meses</td>
+          <td>Hexavalente e Influenza</td>
+          <td>
+            <div>
+              Protege contra doenças respiratórias graves e outras infecções.
+              <div class="info-tooltip">
+                <strong>Hexavalente:</strong> Continuação da imunização contra as 6 doenças. <br>
+                <strong>Influenza:</strong> Protege contra a gripe e suas complicações.
+              </div>
+            </div>
+          </td>
+          <td><span class="status status-pendente">Agendar</span></td>
+        </tr>
+        <tr>
+          <td>9 Meses</td>
+          <td>Febre Amarela e Tríplice Viral</td>
+          <td>
+            <div>
+              Protege contra doenças como sarampo, caxumba, rubéola e febre amarela.
+              <div class="info-tooltip">
+                <strong>Febre Amarela:</strong> Protege contra a febre amarela. <br>
+                <strong>Tríplice Viral:</strong> Protege contra sarampo, caxumba e rubéola.
+              </div>
+            </div>
+          </td>
+          <td><span class="status status-pendente">Agendar</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
 
     <section id="contato" class="bg-yellow-50 py-12 px-4 fade-in">
       <div class="max-w-3xl mx-auto text-center">
