@@ -15,13 +15,14 @@
       line-height: 1.6;
     }
     header {
-      background: #fce4ec;
-      color: #4e342e;
-      padding: 20px;
+      background: #6a1b9a; /* Roxo */
+      color: white;
+      padding: 40px 20px;
       text-align: center;
+      border-bottom: 5px solid #4a148c; /* Roxo escuro */
     }
     header img.logo {
-      width: 180px;
+      width: 220px;
       height: auto;
       margin-bottom: 10px;
     }
@@ -29,18 +30,22 @@
       color: #f48fb1;
     }
     nav {
-      background: #f48fb1;
+      background: #8e24aa; /* Roxo claro */
       text-align: center;
-      padding: 10px;
+      padding: 12px;
     }
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f48fb1; /* Hover cor de rosa */
     }
     section {
-      padding: 30px 20px;
+      padding: 40px 20px;
       max-width: 960px;
       margin: auto;
     }
@@ -50,9 +55,14 @@
       padding: 20px;
       margin: 20px 0;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     }
     h2 {
-      color: #4e342e;
+      color: #6a1b9a; /* Roxo */
       margin-bottom: 20px;
     }
     .whatsapp-float {
@@ -68,15 +78,27 @@
       font-size: 30px;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
       z-index: 100;
+      transition: transform 0.3s ease;
     }
     .whatsapp-float i {
       margin-top: 15px;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
     }
     footer {
       background: #eee;
       padding: 20px;
       text-align: center;
       font-size: 14px;
+      color: #6a1b9a; /* Roxo */
+    }
+    footer a {
+      color: #6a1b9a;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
     @media (max-width: 600px) {
       header h1 { font-size: 22px; }
