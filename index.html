@@ -19,12 +19,14 @@
       <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
         <div class="flex items-center gap-2">
           <img src="logo.png" alt="Logo Babycenter" class="h-10" onerror="this.style.display='none'" />
+          <img src="logo-girafa.png" alt="Logo Girafa" class="h-10" onerror="this.style.display='none'" />
           <h1 class="text-xl font-bold">Babycenter Vacinas</h1>
         </div>
         <nav class="hidden md:flex gap-6 text-sm">
           <a href="#sobre" class="hover:underline">Sobre</a>
           <a href="#servicos" class="hover:underline">Serviços</a>
           <a href="#importancia" class="hover:underline">Vacinas</a>
+          <a href="#pacotes" class="hover:underline">Pacotes</a>
           <a href="#depoimentos" class="hover:underline">Depoimentos</a>
           <a href="#faq" class="hover:underline">Dúvidas</a>
           <a href="#contato" class="hover:underline">Contato</a>
@@ -47,102 +49,112 @@
       </div>
     </section>
 
-    <!-- Sobre -->
-    <section id="sobre" class="py-16 px-4 bg-white">
-      <div class="max-w-4xl mx-auto text-center">
-        <h3 class="text-3xl font-bold text-purple-700 mb-6">Nossa história</h3>
-        <p class="text-lg">
-          A Babycenter Vacinas nasceu do amor pelo cuidado e da missão de proteger as famílias. Fundada em São José dos Campos, oferecemos um espaço acolhedor e confiável para a aplicação de vacinas e medicamentos com prescrição médica.
-        </p>
-      </div>
-    </section>
-
-    <!-- Serviços -->
-    <section id="servicos" class="py-16 px-4 bg-purple-50">
-      <div class="max-w-6xl mx-auto">
-        <h3 class="text-3xl font-bold text-purple-700 text-center mb-10">Nossos serviços</h3>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-2xl shadow">
-            <h4 class="text-xl font-bold text-purple-600 mb-2">Vacinação infantil</h4>
-            <p>Pacotes especiais para bebês de 2 a 9 meses com atendimento individualizado.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow">
-            <h4 class="text-xl font-bold text-purple-600 mb-2">Atendimento domiciliar</h4>
-            <p>Conforto e segurança para toda a família com aplicação de vacinas em casa.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow">
-            <h4 class="text-xl font-bold text-purple-600 mb-2">Medicamentos com prescrição</h4>
-            <p>Aplicação segura de medicamentos com prescrição médica, incluindo injetáveis.</p>
-          </div>
+    <!-- Ícones com diferenciais -->
+    <section class="bg-white py-8 px-4">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-6 text-center">
+        <div>
+          <img src="icone1.png" alt="Profissionalismo" class="mx-auto h-12 mb-2" onerror="this.style.display='none'" />
+          <p class="font-semibold">Profissionais experientes</p>
+        </div>
+        <div>
+          <img src="icone2.png" alt="Conforto" class="mx-auto h-12 mb-2" onerror="this.style.display='none'" />
+          <p class="font-semibold">Conforto no atendimento</p>
+        </div>
+        <div>
+          <img src="icone3.png" alt="Segurança" class="mx-auto h-12 mb-2" onerror="this.style.display='none'" />
+          <p class="font-semibold">Segurança com carinho</p>
+        </div>
+        <div>
+          <img src="icone4.png" alt="Humanização" class="mx-auto h-12 mb-2" onerror="this.style.display='none'" />
+          <p class="font-semibold">Humanização sempre</p>
         </div>
       </div>
     </section>
 
-    <!-- Importância das vacinas -->
-    <section id="importancia" class="py-16 px-4 bg-white">
+    <!-- Seções principais -->
+    <section id="sobre" class="py-12 px-6 bg-gray-50">
       <div class="max-w-4xl mx-auto text-center">
-        <h3 class="text-3xl font-bold text-purple-700 mb-6">Por que vacinar é essencial?</h3>
-        <p class="text-lg mb-4">
-          A vacinação é uma das formas mais eficazes de proteger a saúde de todos, prevenindo doenças graves e salvando vidas. Manter a caderneta atualizada é um ato de amor e responsabilidade.
-        </p>
-        <a href="https://beepvacinas.com.br/blog/" target="_blank" class="text-purple-600 underline">
-          Veja artigos importantes sobre vacinação no blog da Beep Vacinas
-        </a>
-      </div>
-    </section>
-
-    <!-- Comentários e elogios -->
-    <section id="depoimentos" class="py-16 px-4 bg-purple-50">
-      <div class="max-w-3xl mx-auto">
-        <h3 class="text-3xl font-bold text-purple-700 text-center mb-6">Deixe seu elogio ou sugestão</h3>
-        <form class="space-y-4">
-          <input type="text" placeholder="Seu nome" class="w-full p-3 border rounded-xl" required />
-          <textarea placeholder="Seu comentário" class="w-full p-3 border rounded-xl h-32" required></textarea>
-          <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full shadow">
-            Enviar comentário
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-16 px-4 bg-white">
-      <div class="max-w-4xl mx-auto">
-        <h3 class="text-3xl font-bold text-purple-700 mb-8 text-center">Perguntas Frequentes</h3>
-        <div class="space-y-6">
-          <div>
-            <h4 class="font-bold text-purple-600">As vacinas são seguras?</h4>
-            <p>Sim! As vacinas passam por testes rigorosos e são aprovadas por órgãos de saúde como a Anvisa.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-purple-600">Posso vacinar meu bebê em casa?</h4>
-            <p>Sim! Oferecemos atendimento domiciliar para garantir conforto e praticidade.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-purple-600">Preciso de receita para todos os serviços?</h4>
-            <p>Para aplicação de medicamentos sim. Para vacinas, depende do imunizante.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato" class="bg-purple-100 py-16 px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <h3 class="text-3xl font-bold text-purple-700 mb-6">Entre em contato</h3>
-        <p class="mb-2">📞 (12) 98865-2844</p>
-        <p class="mb-2">📍 Rua Major Francisco de Paula Elias, 464 - Vila Adyana, São José dos Campos</p>
+        <h3 class="text-3xl font-bold text-purple-700 mb-4">Sobre Nós</h3>
         <p>
-          💜 Instagram: <a href="https://instagram.com/babycentervacinas" target="_blank" class="underline text-purple-600">@babycentervacinas</a>
+          A Babycenter Vacinas nasceu com o propósito de oferecer um atendimento acolhedor e seguro para toda a família. Nossa equipe é formada por profissionais especializados e apaixonados pela saúde preventiva.
+        </p>
+        <p class="mt-4">
+          Atuamos com aplicação de vacinas, medicamentos com prescrição médica e orientação desde a gestação até a fase adulta, promovendo saúde e bem-estar com carinho e confiança.
         </p>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-purple-600 text-white text-center py-4">
-      <p>&copy; 2025 Babycenter Vacinas. Todos os direitos reservados.</p>
-    </footer>
+    <section id="servicos" class="py-12 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold text-purple-700 mb-8 text-center">Nossos Serviços</h3>
+        <ul class="grid md:grid-cols-2 gap-6">
+          <li>✔️ Vacinas para todas as idades</li>
+          <li>✔️ Atendimento domiciliar</li>
+          <li>✔️ Pacotes vacinais para bebês de 2 a 9 meses</li>
+          <li>✔️ Aplicação de medicamentos com prescrição médica</li>
+          <li>✔️ DTPa para gestantes</li>
+          <li>✔️ Aconselhamento sobre calendário vacinal</li>
+        </ul>
+      </div>
+    </section>
 
+    <section id="importancia" class="py-12 px-6 bg-purple-50">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-purple-700 mb-4">Por que vacinar?</h3>
+        <p>
+          Vacinar é um ato de amor e cuidado. Protege não só quem recebe a vacina, mas também todos ao redor, impedindo a propagação de doenças graves. Com vacinas atualizadas, protegemos nossas crianças, gestantes, idosos e pessoas com imunidade comprometida.
+        </p>
+      </div>
+    </section>
+
+    <section id="pacotes" class="py-12 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-purple-700 mb-4">Pacote Bebês 2 a 9 Meses</h3>
+        <p>
+          Oferecemos pacotes personalizados de vacinas essenciais para o desenvolvimento saudável do seu bebê. Nosso atendimento é feito com todo carinho, e você pode agendar uma visita domiciliar ou vir até nossa clínica.
+        </p>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="py-12 px-6 bg-gray-100">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-purple-700 mb-4">Deixe seu Depoimento</h3>
+        <p class="mb-6">Compartilhe sua experiência com a Babycenter Vacinas 💜</p>
+        <form class="grid gap-4">
+          <input type="text" placeholder="Seu nome" class="p-3 border rounded" required />
+          <textarea placeholder="Seu comentário" class="p-3 border rounded" rows="4" required></textarea>
+          <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white py-2 rounded">Enviar</button>
+        </form>
+        <p class="mt-4 text-sm">Ou veja mais no nosso Instagram: <a href="https://instagram.com/babycentervacinas" class="text-purple-600 hover:underline" target="_blank">@babycentervacinas</a></p>
+      </div>
+    </section>
+
+    <section id="faq" class="py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold text-purple-700 mb-6 text-center">Dúvidas Frequentes</h3>
+        <ul class="space-y-4">
+          <li><strong>As vacinas são seguras?</strong> Sim, todas as vacinas seguem rigorosos padrões de qualidade e segurança.</li>
+          <li><strong>Posso vacinar em casa?</strong> Sim! Temos atendimento domiciliar com todo o cuidado necessário.</li>
+          <li><strong>Gestantes podem vacinar?</strong> Devem! A DTPa é uma vacina essencial para proteger mãe e bebê contra coqueluche.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contato" class="py-12 px-6 bg-purple-50">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-3xl font-bold text-purple-700 mb-4">Fale Conosco</h3>
+        <p>Rua Major Francisco de Paula Elias, 464 - Vila Adyana - São José dos Campos/SP</p>
+        <p class="mt-2">Telefone: <a href="tel:+5512988652844" class="text-purple-600 hover:underline">(12) 98865-2844</a></p>
+        <p class="mt-2">Instagram: <a href="https://instagram.com/babycentervacinas" class="text-purple-600 hover:underline" target="_blank">@babycentervacinas</a></p>
+      </div>
+    </section>
+
+    <!-- Botão fixo WhatsApp -->
+    <a href="https://wa.me/5512988652844" class="fixed bottom-4 right-4 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-6 h-6" />
+    </a>
+
+    <!-- Script de rolagem suave -->
     <script>
       window.onload = () => {
         const links = document.querySelectorAll('a[href^="#"]');
