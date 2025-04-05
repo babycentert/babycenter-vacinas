@@ -23,165 +23,144 @@
           transform: translateY(0);
         }
       }
-      .chat-box {
-        background-color: #f1f1f1;
-        border-radius: 8px;
-        padding: 10px;
-        height: 200px;
-        overflow-y: auto;
-        border: 1px solid #ddd;
-      }
-      .message {
-        background-color: #e0e0e0;
-        padding: 8px;
-        margin: 5px 0;
-        border-radius: 5px;
-      }
-      .user {
-        font-weight: bold;
-      }
-      textarea {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-        margin-top: 10px;
-        font-size: 1rem;
-      }
-      button {
-        background-color: #6A2C97;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-      button:hover {
-        background-color: #5a1e80;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      .highlight {
-        background-color: #e9d5ff;
-        font-weight: bold;
-      }
       @media (max-width: 640px) {
         table {
           font-size: 0.9rem;
         }
       }
+      .faq-answer {
+        display: none;
+      }
+      .faq-question.open + .faq-answer {
+        display: block;
+      }
     </style>
-  </head>
-  <body class="bg-white text-gray-800">
-    <!-- Botão de acesso ao cronograma -->
-    <div class="w-full bg-purple-100 py-4 px-4 text-center">
-      <a href="#cronograma" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-full shadow hover:bg-purple-700 transition">Ver Cronograma de Vacinas</a>
-    </div>
-
-    <!-- Imagem destaque da página inicial -->
-    <section class="w-full max-w-6xl mx-auto px-4 py-8 fade-in">
-      <img src="smiley-woman-showing-sticker-arm-after-getting-vaccine.jpg" alt="Mulher sorridente após vacinação" class="w-full h-auto rounded-2xl shadow-md" />
-    </section>
-
-    <!-- Seção de cronograma de vacinas para bebês -->
-    <section id="cronograma" class="bg-yellow-50 py-12 px-4 fade-in">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-2xl font-bold text-purple-700 mb-6 text-center">Cronograma de Vacinas para Bebês</h2>
-        <div class="overflow-x-auto mb-6">
-          <table class="min-w-full bg-white rounded shadow-md">
-            <thead class="bg-purple-200">
-              <tr>
-                <th class="text-left px-4 py-2">Idade</th>
-                <th class="text-left px-4 py-2">Vacinas Recomendadas</th>
-              </tr>
-            </thead>
-            <tbody class="text-gray-700">
-              <tr class="border-t">
-                <td class="px-4 py-2">Ao nascer</td>
-                <td class="px-4 py-2">BCG, Hepatite B</td>
-              </tr>
-              <tr class="border-t highlight">
-                <td class="px-4 py-2">2 meses</td>
-                <td class="px-4 py-2">Pentavalente, VIP, Rotavírus, Pneumocócica 10</td>
-              </tr>
-              <tr class="border-t">
-                <td class="px-4 py-2">3 meses</td>
-                <td class="px-4 py-2">Meningocócica C</td>
-              </tr>
-              <tr class="border-t">
-                <td class="px-4 py-2">4 meses</td>
-                <td class="px-4 py-2">Pentavalente, VIP, Rotavírus, Pneumocócica 10</td>
-              </tr>
-              <tr class="border-t">
-                <td class="px-4 py-2">5 meses</td>
-                <td class="px-4 py-2">Meningocócica C (2ª dose)</td>
-              </tr>
-              <tr class="border-t">
-                <td class="px-4 py-2">6 meses</td>
-                <td class="px-4 py-2">Pentavalente, VIP, Influenza</td>
-              </tr>
-              <tr class="border-t">
-                <td class="px-4 py-2">9 meses</td>
-                <td class="px-4 py-2">Febre Amarela</td>
-              </tr>
-              <tr class="border-t">
-                <td class="px-4 py-2">12 meses</td>
-                <td class="px-4 py-2">Tríplice Viral, Pneumocócica 10 (reforço), Meningocócica C (reforço)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="text-center">
-          <a href="#contato" class="inline-block bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700 transition">Fale com a gente</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção de Perguntas Frequentes -->
-    <section class="bg-purple-50 py-12 px-4 fade-in">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl font-bold text-purple-700 mb-6 text-center">Perguntas Frequentes</h2>
-        <div class="space-y-4">
-          <!-- FAQ Item 1 -->
-          <div class="border border-purple-200 rounded-lg overflow-hidden">
-            <button class="w-full text-left px-4 py-3 bg-white font-semibold text-purple-800 focus:outline-none toggle-faq">
-              Quais vacinas são obrigatórias no primeiro ano?
-            </button>
-            <div class="px-4 py-3 bg-purple-100 text-purple-900 hidden">
-              As vacinas obrigatórias incluem BCG, Hepatite B, Pentavalente, VIP, Rotavírus, Pneumocócica, Meningocócica C, Tríplice Viral e Febre Amarela.
-            </div>
-          </div>
-          <!-- FAQ Item 2 -->
-          <div class="border border-purple-200 rounded-lg overflow-hidden">
-            <button class="w-full text-left px-4 py-3 bg-white font-semibold text-purple-800 focus:outline-none toggle-faq">
-              Meu bebê pode tomar mais de uma vacina no mesmo dia?
-            </button>
-            <div class="px-4 py-3 bg-purple-100 text-purple-900 hidden">
-              Sim! Algumas vacinas são combinadas na mesma aplicação e outras podem ser administradas no mesmo dia, em locais diferentes do corpo.
-            </div>
-          </div>
-          <!-- FAQ Item 3 -->
-          <div class="border border-purple-200 rounded-lg overflow-hidden">
-            <button class="w-full text-left px-4 py-3 bg-white font-semibold text-purple-800 focus:outline-none toggle-faq">
-              O que fazer se meu bebê tiver reação à vacina?
-            </button>
-            <div class="px-4 py-3 bg-purple-100 text-purple-900 hidden">
-              Reações leves como febre ou inchaço são comuns. Em caso de reações mais intensas, entre em contato com o pediatra ou com a Babycenter Vacinas imediatamente.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <script>
-      document.querySelectorAll('.toggle-faq').forEach(button => {
-        button.addEventListener('click', () => {
-          const answer = button.nextElementSibling;
-          answer.classList.toggle('hidden');
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.faq-question').forEach(q => {
+          q.addEventListener('click', () => {
+            q.classList.toggle('open');
+            const answer = q.nextElementSibling;
+            if (answer.style.display === 'block') {
+              answer.style.display = 'none';
+            } else {
+              answer.style.display = 'block';
+            }
+          });
         });
       });
     </script>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Topo com botões de navegação -->
+    <div class="w-full flex justify-between items-center bg-white px-4 py-2 shadow-sm">
+      <a href="https://seuusuario.github.io/babycenter-vacinas" class="text-purple-700 font-semibold hover:underline">Página Inicial</a>
+      <div class="space-x-2">
+        <a href="#cronograma" class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow hover:bg-purple-700 transition">Ver Cronograma</a>
+        <a href="https://wa.me/5511999999999" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow hover:bg-green-600 transition">Agendar Vacina</a>
+      </div>
+    </div>
+
+    <!-- Imagem principal -->
+    <section class="w-full max-w-6xl mx-auto px-4 py-8 fade-in text-center">
+      <img src="https://images.unsplash.com/photo-1588776814546-ec7eebd1b6bb?auto=format&fit=crop&w=400&q=80" alt="Mulher sorridente após vacinação" class="w-32 md:w-40 h-auto rounded-2xl shadow-md mx-auto" />
+    </section>
+
+    <!-- Pacotes -->
+    <section class="bg-purple-50 py-12 px-4 fade-in">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-purple-700 mb-6">Nossos Pacotes de Vacinação</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
+          <div class="bg-white p-6 rounded-2xl shadow-md border border-purple-100 w-full max-w-xs">
+            <h3 class="text-xl font-semibold text-purple-800 mb-2">Pacote Completo 2-9 meses</h3>
+            <p class="text-gray-700 mb-4">Cobre todas as vacinas do começo com segurança, praticidade e economia.</p>
+            <span class="block text-lg font-bold text-purple-600">R$ 1.299</span>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md border border-purple-100 w-full max-w-xs">
+            <h3 class="text-xl font-semibold text-purple-800 mb-2">Pacote Personalizado</h3>
+            <p class="text-gray-700 mb-4">Monte o pacote ideal com a nossa equipe, conforme a necessidade do seu bebê.</p>
+            <span class="block text-lg font-bold text-purple-600">Sob Consulta</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cronograma -->
+    <section id="cronograma" class="bg-white py-12 px-4 fade-in">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-purple-700 mb-6">Cronograma de Vacinas</h2>
+        <table class="w-full table-auto border-collapse border border-purple-200">
+          <thead>
+            <tr class="bg-purple-100">
+              <th class="border border-purple-200 px-4 py-2">Idade</th>
+              <th class="border border-purple-200 px-4 py-2">Vacinas SUS</th>
+              <th class="border border-purple-200 px-4 py-2">Vacinas Particulares</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-purple-200 px-4 py-2">2 meses</td>
+              <td class="border border-purple-200 px-4 py-2">Pentavalente, VIP, Rotavírus, Pneumocócica 10</td>
+              <td class="border border-purple-200 px-4 py-2">Hexavalente, Rotavírus Pentavalente, Pneumocócica 13</td>
+            </tr>
+            <tr class="bg-purple-50">
+              <td class="border border-purple-200 px-4 py-2">4 meses</td>
+              <td class="border border-purple-200 px-4 py-2">Pentavalente, VIP, Rotavírus, Pneumocócica 10</td>
+              <td class="border border-purple-200 px-4 py-2">Hexavalente, Rotavírus Pentavalente, Pneumocócica 13</td>
+            </tr>
+            <tr>
+              <td class="border border-purple-200 px-4 py-2">6 meses</td>
+              <td class="border border-purple-200 px-4 py-2">Pentavalente, VIP</td>
+              <td class="border border-purple-200 px-4 py-2">Hexavalente, Influenza</td>
+            </tr>
+            <tr class="bg-purple-50">
+              <td class="border border-purple-200 px-4 py-2">12 meses</td>
+              <td class="border border-purple-200 px-4 py-2">Tríplice Viral, Pneumocócica 10</td>
+              <td class="border border-purple-200 px-4 py-2">Tríplice Viral, Pneumocócica 13, Meningocócica ACWY</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-purple-50 py-12 px-4 fade-in">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-purple-700 mb-6">Perguntas Frequentes</h2>
+        <div class="text-left space-y-4">
+          <div>
+            <h3 class="faq-question cursor-pointer font-semibold text-purple-800">1. As vacinas são aprovadas pela Anvisa?</h3>
+            <p class="faq-answer text-gray-700">Sim, todas as vacinas aplicadas são aprovadas pela Anvisa e seguem os mais altos padrões de qualidade.</p>
+          </div>
+          <div>
+            <h3 class="faq-question cursor-pointer font-semibold text-purple-800">2. Posso montar um pacote personalizado?</h3>
+            <p class="faq-answer text-gray-700">Claro! Nossa equipe está pronta para ajudar você a montar o melhor pacote conforme a idade e necessidade do seu bebê.</p>
+          </div>
+          <div>
+            <h3 class="faq-question cursor-pointer font-semibold text-purple-800">3. A clínica aceita plano de saúde?</h3>
+            <p class="faq-answer text-gray-700">Atendemos alguns planos sob reembolso. Consulte nossa equipe para mais detalhes.</p>
+          </div>
+          <div>
+            <h3 class="faq-question cursor-pointer font-semibold text-purple-800">4. Qual a diferença entre as vacinas do SUS e as particulares?</h3>
+            <p class="faq-answer text-gray-700">As vacinas particulares geralmente oferecem maior proteção, menos efeitos colaterais e menos doses, como a Hexavalente no lugar da Pentavalente.</p>
+          </div>
+          <div>
+            <h3 class="faq-question cursor-pointer font-semibold text-purple-800">5. Como agendar uma consulta?</h3>
+            <p class="faq-answer text-gray-700">Você pode agendar pelo WhatsApp clicando no botão de contato no final da página.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="bg-yellow-50 py-12 px-4 fade-in">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-purple-700 mb-6">Entre em Contato</h2>
+        <p class="mb-4 text-gray-700">Estamos aqui para tirar suas dúvidas e ajudar com o que for necessário. Fale conosco pelo WhatsApp!</p>
+        <a href="https://wa.me/5511999999999" target="_blank" class="inline-block bg-green-500 text-white px-6 py-3 rounded-full shadow hover:bg-green-600 transition">
+          Falar pelo WhatsApp
+        </a>
+      </div>
+    </section>
   </body>
 </html>
